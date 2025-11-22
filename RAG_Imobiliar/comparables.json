@@ -1,0 +1,112 @@
+[
+    {
+        "id": 762,
+        "similarity": 0.6281761515674025,
+        "final_score": 0.8279024673568761,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 60078,
+        "size_sqm": 57,
+        "price_per_sqm": 1054.0
+    },
+    {
+        "id": 1556,
+        "similarity": 0.6201070346345703,
+        "final_score": 0.8185807188450965,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 59565,
+        "size_sqm": 57,
+        "price_per_sqm": 1045.0
+    },
+    {
+        "id": 1345,
+        "similarity": 0.6245082057776965,
+        "final_score": 0.7996029426198017,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 69464,
+        "size_sqm": 76,
+        "price_per_sqm": 914.0
+    },
+    {
+        "id": 115,
+        "similarity": 0.6482692260946037,
+        "final_score": 0.7935964988218764,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 72028,
+        "size_sqm": 44,
+        "price_per_sqm": 1637.0
+    },
+    {
+        "id": 1076,
+        "similarity": 0.6619129521473921,
+        "final_score": 0.791512952147392,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 88160,
+        "size_sqm": 80,
+        "price_per_sqm": 1102.0
+    },
+    {
+        "id": 733,
+        "similarity": 0.6302505335387013,
+        "final_score": 0.7894505335387014,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 51840,
+        "size_sqm": 40,
+        "price_per_sqm": 1296.0
+    },
+    {
+        "id": 232,
+        "similarity": 0.6206833317078063,
+        "final_score": 0.7733798834319443,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 73718,
+        "size_sqm": 58,
+        "price_per_sqm": 1271.0
+    },
+    {
+        "id": 838,
+        "similarity": 0.6184399577035059,
+        "final_score": 0.767039957703506,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 72336,
+        "size_sqm": 48,
+        "price_per_sqm": 1507.0
+    },
+    {
+        "id": 843,
+        "similarity": 0.5983193142035812,
+        "final_score": 0.7668814763657433,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 71632,
+        "size_sqm": 74,
+        "price_per_sqm": 968.0
+    },
+    {
+        "id": 31,
+        "similarity": 0.6100806837249045,
+        "final_score": 0.7646571543131399,
+        "property_type": "apartment",
+        "neighborhood": "Titan",
+        "city": "Bucuresti",
+        "price_eur": 79305,
+        "size_sqm": 85,
+        "price_per_sqm": 933.0
+    }
+]

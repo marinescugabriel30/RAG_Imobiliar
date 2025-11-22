@@ -1,0 +1,26 @@
+RAG imobiliar – selecție și estimare de „preț corect”
+
+
+
+
+Veți construi, în echipă sau individual, un sistem RAG (Retrieval-Augmented Generation) care primește o cerere simplă din partea unui utilizator – de pildă „apartament, Titan, minimum 50 mp, buget 110.000 €” – și returnează proprietăți potrivite (apartamente, case sau terenuri), împreună cu o explicație clară a selecției prin comparabile și cu o estimare a „prețului corect”. Sistemul trebuie să decidă dacă prețul listat este sub, în jurul sau peste nivelul pieței și să marcheze explicit verdictul: UNDERPRICED, FAIR sau OVERPRICED. Scopul proiectului este să îmbine două componente: un motor de regăsire a anunțurilor relevante pe baza embeddings (vector store cu metadate filtrabile) și un modul de evaluare transparentă a prețului, bazat pe comparabile și, opțional, pe un model hedonic antrenat pe preț/mp.
+
+
+
+Datele vor proveni dintr-un CSV propriu sau din setul demonstrativ pus la dispoziție de către platforme(respectând T&C). Minim, fișierul trebuie să conțină câmpuri uzuale pentru imobiliare: id, title, property_type (apartment/house/land), price_eur, city, neighborhood, lat, lon, size_sqm, rooms, year_built, floor, max_floor, parking, heating, dist_to_metro_min, dist_to_park_min, description și source_url. Pentru indexare, veți construi un text de document care combină în mod rezonabil tipul, zona, suprafața, anul și descrierea, iar acest text va fi folosit la crearea embeddings-urilor. Vector store-ul trebuie să permită filtre simple (de exemplu, după property_type, city, neighborhood), astfel încât o cerere pentru „apartament în București, Titan” să nu întoarcă, evident, terenuri în Domnești.
+
+
+
+La interogare, sistemul caută top-k comparabile relevante și le ordonează într-un mod explicabil (scorul de similitudine sau ordinea de la vector store sunt suficiente, dar puteți adăuga un re-ranking suplimentar dacă doriți). Pe baza acestor comparabile, proiectul calculează „prețul corect” ca o medie ponderată a prețurilor pe mp, unde ponderea poate ține cont de apropierea în suprafață, aceeași zonă/cartier, același tip de proprietate și, eventual, de scorul de similitudine al documentelor. Intervalul recomandat în jurul prețului corect este ±5%. Dacă prețul listat al proprietății analizate este sub 90% din prețul corect, eticheta va fi UNDERPRICED; dacă se încadrează între 90% și 110%, eticheta va fi FAIR; dacă depășește 110%, eticheta va fi OVERPRICED. Dacă alegeți să antrenați un model hedonic pe log(preț/mp) (de exemplu, o regresie Ridge cu variabile numerice și categorice), îl puteți combina cu media din comparabile într-o formulă simplă (de tipul o medie ponderată între cele două estimări); descrieți clar această combinație în raport.
+
+
+
+Interfața poate fi una simplă, în Streamlit, cu câteva filtre (tip proprietate, cuvinte-cheie pentru zonă, suprafață minimă, buget maxim), un panou cu candidatul ales și o masă cu comparabilele, plus o secțiune care afișează prețul corect, intervalul și eticheta. În plus, puteți include și o hartă bazată pe Google Maps sau pe OpenStreetMap (Folium/Leaflet), care să marcheze proprietatea analizată și comparabilele, ideal colorate după preț/mp și cu pop-up-uri ce arată titlul, prețul și linkul sursă; dacă optați pentru Google Maps, respectați termenii de utilizare și gestionați în siguranță cheia API. Alternativ, dacă preferați linia de comandă, e acceptat, cu condiția să fie clar cum se rulează și cum se obține JSON-ul.
+
+
+
+Transparența este esențială: în interfață sau în jurnalul de ieșire veți afișa proprietatea analizată, lista comparabilelor folosite (cu ID-uri), prețurile pe mp ale acestora, eventualele ponderi și calculele pas cu pas care duc la „prețul corect”. Pe lângă afișarea umană, sistemul trebuie să producă și un obiect JSON cu decizia, care să includă cel puțin câmpurile: decision_target_id, area (cartierul), listed_price_eur, fair_price_eur, fair_range_eur, label și comparables_used (lista ID-urilor folosite efectiv).
+
+
+
+Pentru reproducibilitate, veți include un README în care explicați instalarea dependențelor, pregătirea embeddings-urilor și pornirea aplicației. Dacă folosiți și model hedonic, adăugați un mic script separat pentru antrenare, astfel încât oricine să poată reface modelul din același CSV. Livrabilele proiectului vor consta într-un repo sau o arhivă cu codul și README-ul, un scurt raport PDF de 2–4 pagini care descrie datele, metoda de căutare, formula de preț și limitările, trei fișiere JSON rezultate pentru trei interogări diferite (de exemplu: „apartament 2 camere Titan”, „casă 4 camere Otopeni”, „teren 500–1000 mp în Sector 1”) și un mic videoclip de 2–4 minute în care demonstrați rularea cap-coadă pe un caz real sau din setul demonstrativ.

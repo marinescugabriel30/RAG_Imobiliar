@@ -1,0 +1,103 @@
+{
+  "decision_target_id": "auto_1763625551",
+  "title": "Proprietate exemplu",
+  "listed_price_eur": 60000,
+  "fair_price_eur": 63273.53,
+  "fair_range_eur": [
+    60109.85,
+    66437.2
+  ],
+  "label": "UNDERPRICED",
+  "comparables_used": [
+    {
+      "id": 762,
+      "final_score": 0.8279024673568761,
+      "price_per_sqm": 1054.0,
+      "size_sqm": 57,
+      "price_eur": 60078,
+      "neighborhood": "Titan",
+      "similarity": 0.6281761515674025
+    },
+    {
+      "id": 1556,
+      "final_score": 0.8185807188450965,
+      "price_per_sqm": 1045.0,
+      "size_sqm": 57,
+      "price_eur": 59565,
+      "neighborhood": "Titan",
+      "similarity": 0.6201070346345703
+    },
+    {
+      "id": 1345,
+      "final_score": 0.7996029426198017,
+      "price_per_sqm": 914.0,
+      "size_sqm": 76,
+      "price_eur": 69464,
+      "neighborhood": "Titan",
+      "similarity": 0.6245082057776965
+    },
+    {
+      "id": 115,
+      "final_score": 0.7935964988218764,
+      "price_per_sqm": 1637.0,
+      "size_sqm": 44,
+      "price_eur": 72028,
+      "neighborhood": "Titan",
+      "similarity": 0.6482692260946037
+    },
+    {
+      "id": 1076,
+      "final_score": 0.791512952147392,
+      "price_per_sqm": 1102.0,
+      "size_sqm": 80,
+      "price_eur": 88160,
+      "neighborhood": "Titan",
+      "similarity": 0.6619129521473921
+    },
+    {
+      "id": 733,
+      "final_score": 0.7894505335387014,
+      "price_per_sqm": 1296.0,
+      "size_sqm": 40,
+      "price_eur": 51840,
+      "neighborhood": "Titan",
+      "similarity": 0.6302505335387013
+    },
+    {
+      "id": 232,
+      "final_score": 0.7733798834319443,
+      "price_per_sqm": 1271.0,
+      "size_sqm": 58,
+      "price_eur": 73718,
+      "neighborhood": "Titan",
+      "similarity": 0.6206833317078063
+    },
+    {
+      "id": 838,
+      "final_score": 0.767039957703506,
+      "price_per_sqm": 1507.0,
+      "size_sqm": 48,
+      "price_eur": 72336,
+      "neighborhood": "Titan",
+      "similarity": 0.6184399577035059
+    },
+    {
+      "id": 843,
+      "final_score": 0.7668814763657433,
+      "price_per_sqm": 968.0,
+      "size_sqm": 74,
+      "price_eur": 71632,
+      "neighborhood": "Titan",
+      "similarity": 0.5983193142035812
+    },
+    {
+      "id": 31,
+      "final_score": 0.7646571543131399,
+      "price_per_sqm": 933.0,
+      "size_sqm": 85,
+      "price_eur": 79305,
+      "neighborhood": "Titan",
+      "similarity": 0.6100806837249045
+    }
+  ]
+}
